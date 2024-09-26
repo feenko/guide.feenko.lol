@@ -1,0 +1,97 @@
+---
+title: Instalacja Javy
+description: Jak zainstalować Javę na serwerze dedykowanym lub VPS?
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+
+<Callout title='Informacja na temat tego poradnika' type='info'>
+  Ten poradnik jest przeznaczony dla osób korzystających z serwerów dedykowanych
+  lub VPS.
+</Callout>
+
+## Aktualizacja systemu
+
+Zanim przystąpisz do instalacji Javy, zalecamy wykonanie pełnej aktualizacji systemu. W terminalu wystarczy wpisać poniższe komendy:
+
+<Tabs groupId='os' items={['Debian/Ubuntu', 'CentOS', 'Fedora']}>
+
+<Tab value='Debian/Ubuntu'>
+```bash
+sudo apt update
+sudo apt upgrade
+```
+</Tab>
+<Tab value='CentOS'>
+```bash
+sudo yum update
+```
+</Tab>
+<Tab value='Fedora'>
+```bash
+sudo dnf update
+```
+</Tab>
+</Tabs>
+
+## Instalacja
+
+Jest to stosunkowo proste – wystarczy, że wpiszesz poniższe komendy i podmienisz wersję Javy, którą chcesz zainstalować.
+
+<Tabs groupId='os' items={['Debian/Ubuntu', 'CentOS', 'Fedora']}>
+
+<Tab value='Debian/Ubuntu'>
+```bash
+sudo apt install openjdk-XX-jdk-headless # zamień XX na wybraną wersję javy (8, 11, 17, 18, 19, 21)
+```
+</Tab>
+<Tab value='CentOS'>
+```bash
+sudo yum install java-XX-openjdk-headless # zamień XX na wybraną wersję javy (1.8.0, 11, 17, 18, 19, 21)
+```
+</Tab>
+<Tab value='Fedora'>
+```bash
+sudo dnf install java-XX-openjdk-headless # zamień XX na wybraną wersję javy (1.8.0, 11, 17, 18, 19, 21)
+```
+</Tab>
+</Tabs>
+
+## Sprawdzenie instalacji
+
+```bash
+java -version
+```
+
+Spodziewana odpowiedź (wersje mogą się różnić):
+
+```bash
+openjdk version "1.8.0_322"
+OpenJDK Runtime Environment (build 1.8.0_322-b06)
+OpenJDK 64-Bit Server VM (build 25.322-b06, mixed mode)
+```
+
+Jeżeli nie wystąpił żaden błąd, oznacza to, że Java została zainstalowana poprawnie.
+
+## Zarządzanie kilkoma wersjami Javy
+
+W sytuacji, gdy potrzebujesz więcej niż jedną wersję Javy, warto skorzystać z narzędzi do zarządzania wersjami.
+
+<Tabs groupId='os' items={['Debian/Ubuntu', 'CentOS', 'Fedora']}>
+
+<Tab value='Debian/Ubuntu'>
+```bash
+sudo update-alternatives --config java
+```
+</Tab>
+<Tab value='CentOS'>
+```bash
+sudo alternatives --config java
+```
+</Tab>
+<Tab value='Fedora'>
+```bash
+sudo alternatives --config java
+```
+</Tab>
+</Tabs>

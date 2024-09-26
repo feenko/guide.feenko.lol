@@ -1,0 +1,55 @@
+---
+title: Tworzenie serwera Minecraft
+description: Jak stworzyć serwer minecraft.
+---
+
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
+
+<Callout title='Informacja na temat tego poradnika' type='info'>
+  Ten poradnik jest przeznaczony dla osób korzystających z serwerów dedykowanych
+  lub VPS. W przypadku hostingów zazwyczaj jest możliwość instalacji serwera z
+  panelu.
+</Callout>
+
+## Zanim przejdziesz dalej
+
+Zdecydowanie warto zobaczyć ten poradnik. Znajdziesz w nim informacje o aktualizacji systemu oraz instrukcje instalacji Javy.
+
+<Cards className='grid-cols-1 sm:grid-cols-1'>
+  <Card
+    href='/konfiguracja/instalacja-javy'
+    title='Instalacja Javy'
+    description='Jak zainstalować Javę na serwerze dedykowanym lub VPS?'
+  />
+</Cards>
+
+## Wybór silnika
+
+Wybór silnika to kwestia indywidualna, ponieważ każdy ma swoje preferencje. Dlatego warto najpierw zapoznać się z różnymi opcjami, aby lepiej zrozumieć, który silnik będzie dla Ciebie najlepszy.
+
+### Popularne opcje
+
+- Paper
+- Pufferfish
+- Purpur
+- Spigot
+
+Te silniki wspierają najnowsze wersje Minecraft, dzięki czemu masz pewność, że rozgrywka będzie stabilna.
+
+## Instalacja
+
+1. Upewnij się, że masz zainstalowane JDK zgodne z wersją Minecrafta.
+
+2. Utwórz folder o nazwie dla swojego serwera, na przykład `fajnemc`. Nazwa folderu może być dowolna i nie musi odpowiadać nazwie serwera.
+
+3. Pobierz plik JAR serwera z oficjalnej strony silnika, który wybrałeś. Przenieś ten plik do folderu serwera i zmień jego nazwę na `server.jar`.
+
+4. Uruchom serwer tą oto komendą:
+
+```bash
+java -Xmx1024M -Xms1024M -jar server.jar
+```
+
+## Konfiguracja
+
+Gratulacje! Stworzyłeś swój serwer Minecraft. Teraz czas na konfigurację i optymalizację. Więcej informacji znajdziesz na stronach poniżej.

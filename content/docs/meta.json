@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "index",
+    "---Podstawy---",
+    "podstawy/hostingi",
+    "podstawy/specyfikacje",
+    "---Konfiguracja---",
+    "konfiguracja/instalacja-javy",
+    "konfiguracja/instalacja",
+    "---Przydatne zasoby---",
+    "[Generator skryptu startowego](https://docs.papermc.io/misc/tools/start-script-gen)"
+  ]
+}
