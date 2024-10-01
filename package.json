@@ -7,7 +7,8 @@
     "dev": "next dev",
     "start": "next start",
     "postinstall": "fumadocs-mdx",
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "build&start": "next build && next start"
   },
   "engines": {
     "pnpm": ">=9.11.0"
